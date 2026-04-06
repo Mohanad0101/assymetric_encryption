@@ -29,6 +29,7 @@ def extract_field(plaintext: str, key: str) -> str:
 #TODO
 def main() -> None:
     with socket.socket(socket.AF_INET, socket.????) as s:
+        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.bind((HOST, PORT))
         s.listen(1)
         print(f"[server] listening on {HOST}:{PORT}")
