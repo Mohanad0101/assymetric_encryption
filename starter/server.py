@@ -26,9 +26,9 @@ def extract_field(plaintext: str, key: str) -> str:
         return ""
     return plaintext.split(marker, 1)[1].split(";", 1)[0].strip()
 
-
+#TODO
 def main() -> None:
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    with socket.socket(socket.AF_INET, socket.????) as s:
         s.bind((HOST, PORT))
         s.listen(1)
         print(f"[server] listening on {HOST}:{PORT}")
